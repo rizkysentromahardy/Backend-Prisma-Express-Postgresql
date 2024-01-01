@@ -1,4 +1,4 @@
-const prisma = require("../db")
+
 const { findProducts, findProductsById, insertProductsById, deleteProducts, editProducts } = require("./product.repository")
 
 const getAllProducts = async () => {

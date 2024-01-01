@@ -1,9 +1,7 @@
 const express = require('express')
-const prisma = require('../db')
 const { getAllProducts, getAllProductsById, createProductsData, deleteProductsById, editProductsById } = require('./product.services')
+
 const router = express.Router()
-
-
 
 //get data menggunakan async 
 router.get('/',async (req,res) => {
@@ -12,7 +10,7 @@ router.get('/',async (req,res) => {
   })  
 router.get('/:id',async (req,res) => {
     try {
-        const productId = req.params.id 
+        const productId = req.params.id
         const products = await getAllProductsById(productId)
 
         res.send(products)
@@ -66,7 +64,7 @@ router.patch('/:id', async (req,res) => {
   
     res.send({
       data:product,
-      message:"Success Update Product"
+      message:"Success Update Productt"
     })
   }) 
   

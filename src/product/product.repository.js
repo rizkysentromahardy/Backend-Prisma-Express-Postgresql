@@ -11,7 +11,6 @@ const findProductsById = async (id) => {
             id : Number(id)
         }
     })
-
     return product
 }
 const insertProductsById = async (productDatas) => {
@@ -46,9 +45,6 @@ const editProducts = async (id,productDatas) => {
       })
       return product
 }
-
-
-
 
 module.exports = {
     findProducts,
